@@ -20,7 +20,7 @@ This repository ships a **single `starship.toml`** with comment-based palette sw
 
 ---
 
-## 🖼 Preview (conceptual)
+## 🖼 Preview
 
 ![Starship Everforest Dark – Inconsolata Nerd Font](preview.png)
 
