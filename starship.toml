@@ -1,0 +1,255 @@
+# -------------------------------------------------------------------
+# Starship - Everforest (Dark|Medium|Soft) palettes
+# Toggle by changing the active palette name below.
+# Font: Inconsolata Nerd Font
+# -------------------------------------------------------------------
+
+# ACTIVE PALETTE (pick one):
+# palette = "everforest_dark_soft"
+palette = "everforest_dark_medium"
+# palette = "everforest_dark_hard"
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Disable the package module, hiding it from the prompt completely
+#[package]
+# disabled = true
+
+
+format = """
+[](fg:gray0)\
+$os\
+$username\
+[](fg:gray0 bg:bg5)\
+$directory\
+[](fg:bg5 bg:bg4)\
+$git_branch\
+$git_status\
+[](fg:bg4 bg:bg3)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:bg3 bg:bg2)\
+$docker_context\
+[](fg:bg2 bg:bg1)\
+$time\
+[ ](fg:bg1)\
+$line_break$character"""
+
+[palettes.everforest_dark_soft]
+# Core foreground/background
+text   = "#D3C6AA" # Foreground
+base   = "#333C43" # Background 0 (soft)
+mantle = "#3A464C" # Background 1
+crust  = "#293136" # Background Dim
+# Everforest backgrounds & grays
+bg_dim = "#293136"
+bg0 = "#333C43"
+bg1 = "#3A464C"
+bg2 = "#434F55"
+bg3 = "#4D5960"
+bg4 = "#555F66"
+bg5 = "#5D6B66"
+gray0 = "#7A8478"
+gray1 = "#859289"
+gray2 = "#9DA9A0"
+# Everforest accents
+red     = "#E67E80"
+orange  = "#E69875"
+yellow  = "#DBBC7F"
+green   = "#A7C080"
+aqua    = "#83C092"
+blue    = "#7FBBB3"
+purple  = "#D699B6"
+
+[palettes.everforest_dark_medium]
+# Core foreground/background
+text   = "#D3C6AA" # Foreground
+base   = "#2D353B" # Background 0
+mantle = "#343F44" # Background 1
+crust  = "#232A2E" # Background Dim
+# Everforest backgrounds & grays
+bg_dim = "#232A2E"
+bg0 = "#2D353B"
+bg1 = "#343F44"
+bg2 = "#3D484D"
+bg3 = "#475258"
+bg4 = "#4F585E"
+bg5 = "#56635f"
+gray0 = "#7A8478"
+gray1 = "#859289"
+gray2 = "#9DA9A0"
+# Everforest Accents
+red     = "#E67E80"
+orange  = "#E69875"
+yellow  = "#DBBC7F"
+green   = "#A7C080"
+aqua    = "#83C092"
+blue    = "#7FBBB3"
+purple  = "#D699B6"
+
+[palettes.everforest_dark_hard]
+# Core foreground/background
+text   = "#D3C6AA" # Foreground
+base   = "#1E2326" # Background 0 (hard)
+mantle = "#272E33" # Background 1
+crust  = "#14191D" # Background Dim
+# Everforest backgrounds & grays
+bg_dim = "#1E2326"
+bg0 = "#272E33"
+bg1 = "#2E383C"
+bg2 = "#374145"
+bg3 = "#414B50"
+bg4 = "#495156"
+bg5 = "#4F5B58"
+gray0 = "#7A8478"
+gray1 = "#859289"
+gray2 = "#9DA9A0"
+# Everforest accents
+red     = "#E67E80"
+orange  = "#E69875"
+yellow  = "#DBBC7F"
+green   = "#A7C080"
+aqua    = "#83C092"
+blue    = "#7FBBB3"
+purple  = "#D699B6"
+
+
+[os]
+disabled = false
+style = "fg:bg1 bg:gray0"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "fg:bg1 bg:gray0"
+style_root = "fg:bg1 bg:gray0"
+format = "[ $user ]($style)"
+
+[directory]
+style = "fg:yellow bg:bg5"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "fg:purple bg:bg4"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:bg4"
+format = '''[([($conflicted$ahead_behind$stashed$modified$staged$renamed$deleted$untracked)]($style)) ]($style)'''
+# Per-segment formatting (only appears if that status exists)
+conflicted = '[ ](fg:red bg:bg4)'
+ahead      = '[${count}](fg:yellow bg:bg4)'
+behind     = '[${count}](fg:yellow bg:bg4)'
+diverged   = '[${ahead_count}${behind_count}](fg:yellow bg:bg4)'
+stashed    = '[ ${count}](fg:aqua bg:bg4)'
+modified   = '[ ${count}](fg:orange bg:bg4)'
+staged     = '[ ${count}](fg:green bg:bg4)'
+renamed    = '[ ${count}](fg:base bg:bg4)'
+deleted    = '[ ${count}](fg:red bg:bg4)'
+untracked  = '[ ${count}](fg:purple bg:bg4)'
+
+[nodejs]
+symbol = ""
+style  = "bg:green"
+format = "[[ $symbol( $version) ](fg:green bg:bg3)]($style)"
+
+[python]
+symbol = ""
+style  = "bg:blue"
+format = "[[ $symbol( $version) ](fg:blue bg:bg3)]($style)"
+
+[rust]
+symbol = ""
+style  = "bg:orange"
+format = "[[ $symbol( $version) ](fg:orange bg:bg3)]($style)"
+
+[golang]
+symbol = ""
+style  = "bg:aqua"
+format = "[[ $symbol( $version) ](fg:aqua bg:bg3)]($style)"
+
+[php]
+symbol = ""
+style  = "bg:purple"
+format = "[[ $symbol( $version) ](fg:purple bg:bg3)]($style)"
+
+[java]
+symbol = ""
+style  = "bg:red"
+format = "[[ $symbol( $version) ](fg:red bg:bg3)]($style)"
+
+[kotlin]
+symbol = ""
+style = "bg:aqua"
+format = '[[ $symbol( $version) ](fg:aqua bg:bg3)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:aqua"
+format = '[[ $symbol( $version) ](fg:aqua bg:bg3)]($style)'
+
+[docker_context]
+symbol = ""
+style  = "bg:bg2"
+format = "[[ $symbol $context ](fg:base bg:bg2)]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:bg1"
+format = '[[   $time ](fg:text bg:bg1)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+# Replace the '❯' symbol in the prompt with '➜'
+success_symbol = "[](bold fg:green)"
+error_symbol   = "[](bold fg:red)"
+vimcmd_symbol = "[](bold fg:aqua)"
+vimcmd_replace_one_symbol = "[](bold fg:purple)"
+vimcmd_replace_symbol     = "[](bold fg:purple)"
+vimcmd_visual_symbol      = "[](bold fg:blue)"
+
