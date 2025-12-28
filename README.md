@@ -27,7 +27,7 @@ This repository ships a **single `starship.toml`** with comment-based palette sw
 
 ## 🖼 Preview (conceptual)
 
-![Starship Everforest Dark – Inconsolata Nerd Font](assets/preview.png)
+![Starship Everforest Dark – Inconsolata Nerd Font](preview.png)
 
 > Shown: Everforest Dark Soft, Medium, Hard
 > Exact appearance depends on terminal + font rendering.
