@@ -1,4 +1,4 @@
-# Starship Everforest Dark (Soft / Medium / Hard)
+# 🌲 Everforest Dark Themes for Starship
 
 A **powerline-style Starship prompt** using the **Everforest Dark** color palette, with toggleable **Soft**, **Medium**, and **Hard** variants.
 
@@ -10,17 +10,16 @@ This repository ships a **single `starship.toml`** with comment-based palette sw
 
 ## ✨ Features
 
-- 🌲 **Everforest Dark** palettes  
-  - 🎨 Soft / Medium / Hard (palette-driven: toggle via comment)
-- 🧱 Powerline separators
-- 🧼 Git status
-- 🧠 Language-aware modules (Node.js, Python, Rust, Go, Java, Kotlin, Haskell, PHP)
-- 🐳 Docker context support
+- **Everforest Dark** palettes for Soft / Medium / Hard
+- Powerline separators
+- Git status
 - ⏱ Time & command status indicators
+- Work In Progress: Language-aware modules (Node.js, Python, Rust, Go, Java, Kotlin, Haskell, PHP)
+- Work In Progress: 🐳 Docker context support
 
 ---
 
-## 🖼 Preview
+## 🎨 Preview
 
 ![Starship Everforest Dark – Inconsolata Nerd Font](preview.png)
 
