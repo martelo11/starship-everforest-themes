@@ -2,11 +2,7 @@
 
 A **powerline-style Starship prompt** using the **Everforest Dark** color palette, with toggleable **Soft**, **Medium**, and **Hard** variants.
 
-Designed for:
-- clean visual hierarchy
-- zero empty segments
-- consistent Everforest theming
-- Nerd Font icons
+Designed for Nerd Font icons.
 
 This repository ships a **single `starship.toml`** with comment-based palette switching and carefully tuned module styling.
 
@@ -15,13 +11,12 @@ This repository ships a **single `starship.toml`** with comment-based palette sw
 ## ✨ Features
 
 - 🌲 **Everforest Dark** palettes  
-  - Soft / Medium / Hard (toggle via comment)
-- 🧱 Powerline separators (`  `)
-- 🧼 Git status with **no empty brackets**
+  - 🎨 Soft / Medium / Hard (palette-driven: toggle via comment)
+- 🧱 Powerline separators
+- 🧼 Git status
 - 🧠 Language-aware modules (Node.js, Python, Rust, Go, Java, Kotlin, Haskell, PHP)
 - 🐳 Docker context support
 - ⏱ Time & command status indicators
-- 🎨 Fully palette-driven (no hard-coded colors in modules)
 
 ---
 
@@ -30,6 +25,7 @@ This repository ships a **single `starship.toml`** with comment-based palette sw
 ![Starship Everforest Dark – Inconsolata Nerd Font](preview.png)
 
 > Shown: Everforest Dark Soft, Medium, Hard
+
 > Exact appearance depends on terminal + font rendering.
 
 ---
@@ -80,27 +76,6 @@ palette = "everforest_dark_medium"
 ```
 
 Comment/uncomment **exactly one** line.
-
----
-
-## 🎨 Color Philosophy
-
-- Accent colors are **identical across Soft / Medium / Hard**
-- Only background ramps change
-- Color meaning stays consistent across variants
-
----
-
-## 🧩 Git Status (Clean by Design)
-
-- No empty `[]`
-- No dangling separators
-- Status renders only when data exists
-
-Examples:
-- `[21]` → staged + modified
-- `[3]` → untracked
-- *(nothing)* → clean repo
 
 ---
 
